@@ -1,0 +1,187 @@
+site_name: Dataset Generator
+site_description: Synthetic data pipelines for lakehouse tables
+site_author: Volker Lorrmann
+site_url: https://dataset-generator.readthedocs.io/
+
+repo_name: volker-lorrmann/dataset-generator
+repo_url: https://github.com/volker-lorrmann/dataset-generator
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Basic Concepts: getting-started/concepts.md
+  - User Guide:
+    - Overview: user-guide/index.md
+    - Generators:
+      - E-commerce: user-guide/generators/ecommerce.md
+      - Market Data: user-guide/generators/market.md
+      - Sensors: user-guide/generators/sensors.md
+      - Weather: user-guide/generators/weather.md
+    - Writers:
+      - Parquet: user-guide/writers/parquet.md
+      - Delta Lake: user-guide/writers/delta.md
+      - Apache Iceberg: user-guide/writers/iceberg.md
+      - DuckLake: user-guide/writers/ducklake.md
+    - Configuration: user-guide/configuration.md
+    - S3 Integration: user-guide/s3.md
+  - API Reference:
+    - Core: api/core.md
+    - Generators: api/generators.md
+    - Writers: api/writers.md
+    - CLI: api/cli.md
+  - Tutorials:
+    - Overview: tutorials/index.md
+    - E-commerce Dataset: tutorials/ecommerce-dataset.md
+    - S3 with MinIO: tutorials/s3-minio.md
+    - Custom Generator: tutorials/custom-generator.md
+  - Examples:
+    - Jupyter Notebooks: examples/jupyter.md
+    - Marimo Apps: examples/marimo.md
+  - Development:
+    - Contributing: development/contributing.md
+    - Architecture: development/architecture.md
+    - Testing: development/testing.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  logo: assets/logo.png
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_section_style: list
+            docstring_options:
+              ignore_init_summary: yes
+            merge_init_into_class: yes
+            show_source: true
+            show_root_heading: true
+            show_root_members_full_path: false
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+  - gen-files:
+      scripts:
+        - docs/scripts/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: volker-lorrmann
+      repo: dataset-generator
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/volker-lorrmann/dataset-generator
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/dataset-generator/
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+watch:
+  - src/dataset_generator

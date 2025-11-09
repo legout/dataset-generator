@@ -1,0 +1,7 @@
+[s3]
+bind = "0.0.0.0:9002"
+access_key = "demo"
+secret_key = "demo123"
+
+[console]
+bind = "0.0.0.0:9900"

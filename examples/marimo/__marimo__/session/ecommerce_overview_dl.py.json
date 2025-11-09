@@ -1,0 +1,131 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.16.5"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "bcf1dbab6a39bb5d6114ed7cef85e99e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "e41fa81c37940547810b0421e08928f7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "2bc1f512b13a7a9d004d017118d80044",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "0fcc9efb2586f979a3ceff60c528f29f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "a9c4d8bd2cae0713def3cb86c4389524",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre style='font-size: 12px'>&lt;_duckdb.DuckDBPyConnection object at 0x7f40a5e2e130&gt;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "c036c2b812d96015e1040e85be2a406b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre style='font-size: 12px'>&lt;_duckdb.DuckDBPyConnection object at 0x7f40a5e2e130&gt;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "ba647156df72237264d0c431934bb12d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Xref-0' random-id='89fddcc1-128c-854e-a9a3-d3dfc4c1324c'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-09-16&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3174009.3799999896,&#92;&quot;order_count&#92;&quot;:52073,&#92;&quot;unique_items&#92;&quot;:42544,&#92;&quot;customers&#92;&quot;:52073,&#92;&quot;unique_customers&#92;&quot;:10154},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-12-04&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3172605.4799999455,&#92;&quot;order_count&#92;&quot;:52015,&#92;&quot;unique_items&#92;&quot;:42378,&#92;&quot;customers&#92;&quot;:52015,&#92;&quot;unique_customers&#92;&quot;:10188},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-08-22&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3170772.0800000117,&#92;&quot;order_count&#92;&quot;:51966,&#92;&quot;unique_items&#92;&quot;:42445,&#92;&quot;customers&#92;&quot;:51966,&#92;&quot;unique_customers&#92;&quot;:10192},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-03-31&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3168394.5300000156,&#92;&quot;order_count&#92;&quot;:51874,&#92;&quot;unique_items&#92;&quot;:42325,&#92;&quot;customers&#92;&quot;:51874,&#92;&quot;unique_customers&#92;&quot;:10175},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-06-19&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3166267.8899999615,&#92;&quot;order_count&#92;&quot;:52154,&#92;&quot;unique_items&#92;&quot;:42481,&#92;&quot;customers&#92;&quot;:52154,&#92;&quot;unique_customers&#92;&quot;:10170},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-04-19&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3163378.2200000356,&#92;&quot;order_count&#92;&quot;:52293,&#92;&quot;unique_items&#92;&quot;:42547,&#92;&quot;customers&#92;&quot;:52293,&#92;&quot;unique_customers&#92;&quot;:10192},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-08-16&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3162514.340000076,&#92;&quot;order_count&#92;&quot;:52040,&#92;&quot;unique_items&#92;&quot;:42464,&#92;&quot;customers&#92;&quot;:52040,&#92;&quot;unique_customers&#92;&quot;:10211},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2025-03-27&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3160823.940000044,&#92;&quot;order_count&#92;&quot;:52103,&#92;&quot;unique_items&#92;&quot;:42560,&#92;&quot;customers&#92;&quot;:52103,&#92;&quot;unique_customers&#92;&quot;:10177},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-02-18&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3160583.8099999824,&#92;&quot;order_count&#92;&quot;:52648,&#92;&quot;unique_items&#92;&quot;:42883,&#92;&quot;customers&#92;&quot;:52648,&#92;&quot;unique_customers&#92;&quot;:10182},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-07-31&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3158931.759999995,&#92;&quot;order_count&#92;&quot;:52036,&#92;&quot;unique_items&#92;&quot;:42682,&#92;&quot;customers&#92;&quot;:52036,&#92;&quot;unique_customers&#92;&quot;:10200}]&quot;' data-total-rows='100' data-total-columns='6' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;order_date&quot;,[&quot;date&quot;,&quot;date&quot;]],[&quot;total_revenue&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;order_count&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;unique_items&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;customers&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;unique_customers&quot;,[&quot;integer&quot;,&quot;i64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZbXj",
+      "code_hash": "201c311fb62ed828a94e1549d7834dd3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ZbXj-0' random-id='9ce1c2a6-9747-3472-5324-4eccc3c379dd'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-09-16&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3174009.3799999896,&#92;&quot;order_count&#92;&quot;:52073,&#92;&quot;unique_items&#92;&quot;:42544,&#92;&quot;customers&#92;&quot;:52073,&#92;&quot;unique_customers&#92;&quot;:10154},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-12-04&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3172605.4799999455,&#92;&quot;order_count&#92;&quot;:52015,&#92;&quot;unique_items&#92;&quot;:42378,&#92;&quot;customers&#92;&quot;:52015,&#92;&quot;unique_customers&#92;&quot;:10188},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-08-22&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3170772.0800000117,&#92;&quot;order_count&#92;&quot;:51966,&#92;&quot;unique_items&#92;&quot;:42445,&#92;&quot;customers&#92;&quot;:51966,&#92;&quot;unique_customers&#92;&quot;:10192},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-03-31&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3168394.5300000156,&#92;&quot;order_count&#92;&quot;:51874,&#92;&quot;unique_items&#92;&quot;:42325,&#92;&quot;customers&#92;&quot;:51874,&#92;&quot;unique_customers&#92;&quot;:10175},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-06-19&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3166267.8899999615,&#92;&quot;order_count&#92;&quot;:52154,&#92;&quot;unique_items&#92;&quot;:42481,&#92;&quot;customers&#92;&quot;:52154,&#92;&quot;unique_customers&#92;&quot;:10170},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-04-19&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3163378.2200000356,&#92;&quot;order_count&#92;&quot;:52293,&#92;&quot;unique_items&#92;&quot;:42547,&#92;&quot;customers&#92;&quot;:52293,&#92;&quot;unique_customers&#92;&quot;:10192},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-08-16&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3162514.340000076,&#92;&quot;order_count&#92;&quot;:52040,&#92;&quot;unique_items&#92;&quot;:42464,&#92;&quot;customers&#92;&quot;:52040,&#92;&quot;unique_customers&#92;&quot;:10211},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2025-03-27&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3160823.940000044,&#92;&quot;order_count&#92;&quot;:52103,&#92;&quot;unique_items&#92;&quot;:42560,&#92;&quot;customers&#92;&quot;:52103,&#92;&quot;unique_customers&#92;&quot;:10177},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-02-18&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3160583.8099999824,&#92;&quot;order_count&#92;&quot;:52648,&#92;&quot;unique_items&#92;&quot;:42883,&#92;&quot;customers&#92;&quot;:52648,&#92;&quot;unique_customers&#92;&quot;:10182},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-07-31&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3158931.759999995,&#92;&quot;order_count&#92;&quot;:52036,&#92;&quot;unique_items&#92;&quot;:42682,&#92;&quot;customers&#92;&quot;:52036,&#92;&quot;unique_customers&#92;&quot;:10200}]&quot;' data-total-rows='100' data-total-columns='6' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;order_date&quot;,[&quot;date&quot;,&quot;date&quot;]],[&quot;total_revenue&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;order_count&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;unique_items&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;customers&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;unique_customers&quot;,[&quot;integer&quot;,&quot;i64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "tpAW",
+      "code_hash": "264b0c5a0b1ed855d979c6d14b70543e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='tpAW-0' random-id='3efd12fd-6318-527b-8aea-70a2fc34d20b'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-09-16&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3174009.3799999896,&#92;&quot;order_count&#92;&quot;:52073,&#92;&quot;unique_items&#92;&quot;:42544,&#92;&quot;customers&#92;&quot;:52073,&#92;&quot;unique_customers&#92;&quot;:10154},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-12-04&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3172605.4799999455,&#92;&quot;order_count&#92;&quot;:52015,&#92;&quot;unique_items&#92;&quot;:42378,&#92;&quot;customers&#92;&quot;:52015,&#92;&quot;unique_customers&#92;&quot;:10188},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-08-22&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3170772.0800000117,&#92;&quot;order_count&#92;&quot;:51966,&#92;&quot;unique_items&#92;&quot;:42445,&#92;&quot;customers&#92;&quot;:51966,&#92;&quot;unique_customers&#92;&quot;:10192},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-03-31&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3168394.5300000156,&#92;&quot;order_count&#92;&quot;:51874,&#92;&quot;unique_items&#92;&quot;:42325,&#92;&quot;customers&#92;&quot;:51874,&#92;&quot;unique_customers&#92;&quot;:10175},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-06-19&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3166267.8899999615,&#92;&quot;order_count&#92;&quot;:52154,&#92;&quot;unique_items&#92;&quot;:42481,&#92;&quot;customers&#92;&quot;:52154,&#92;&quot;unique_customers&#92;&quot;:10170},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-04-19&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3163378.2200000356,&#92;&quot;order_count&#92;&quot;:52293,&#92;&quot;unique_items&#92;&quot;:42547,&#92;&quot;customers&#92;&quot;:52293,&#92;&quot;unique_customers&#92;&quot;:10192},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-08-16&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3162514.340000076,&#92;&quot;order_count&#92;&quot;:52040,&#92;&quot;unique_items&#92;&quot;:42464,&#92;&quot;customers&#92;&quot;:52040,&#92;&quot;unique_customers&#92;&quot;:10211},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2025-03-27&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3160823.940000044,&#92;&quot;order_count&#92;&quot;:52103,&#92;&quot;unique_items&#92;&quot;:42560,&#92;&quot;customers&#92;&quot;:52103,&#92;&quot;unique_customers&#92;&quot;:10177},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2024-02-18&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3160583.8099999824,&#92;&quot;order_count&#92;&quot;:52648,&#92;&quot;unique_items&#92;&quot;:42883,&#92;&quot;customers&#92;&quot;:52648,&#92;&quot;unique_customers&#92;&quot;:10182},{&#92;&quot;order_date&#92;&quot;:&#92;&quot;2023-07-31&#92;&quot;,&#92;&quot;total_revenue&#92;&quot;:3158931.759999995,&#92;&quot;order_count&#92;&quot;:52036,&#92;&quot;unique_items&#92;&quot;:42682,&#92;&quot;customers&#92;&quot;:52036,&#92;&quot;unique_customers&#92;&quot;:10200}]&quot;' data-total-rows='100' data-total-columns='6' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;order_date&quot;,[&quot;date&quot;,&quot;date&quot;]],[&quot;total_revenue&quot;,[&quot;number&quot;,&quot;f64&quot;]],[&quot;order_count&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;unique_items&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;customers&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;unique_customers&quot;,[&quot;integer&quot;,&quot;i64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DHJB",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
