@@ -22,6 +22,22 @@ SENSOR_SCHEMA: SchemaLike = {
 
 @dataclass
 class SensorsGenerator:
+    """Generate multi-metric IoT/sensor readings with noise and anomalies.
+
+    Args:
+        n_devices: Number of devices emitting readings.
+        metrics: Metric names produced by every device.
+        start_date: Inclusive lower bound for generated dates.
+        end_date: Inclusive upper bound for generated dates.
+        sampling_interval_minutes: Spacing between measurements.
+        noise_sigma: Standard deviation of Gaussian measurement noise.
+        drift_per_hour: Linear drift applied over the course of a day.
+        missing_probability: Probability that a reading becomes missing.
+        anomaly_probability: Probability that a reading becomes an anomaly.
+        anomaly_scale: Magnitude of anomaly spikes.
+        seed: RNG seed.
+        file_rows_target: Approximate batch size.
+    """
     n_devices: int = 100
     metrics: Sequence[str] = ("temperature", "vibration", "pressure")
     start_date: date = date(2023, 1, 1)

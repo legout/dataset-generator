@@ -31,7 +31,7 @@ For more advanced use cases:
 
 - **[S3 Integration](../user-guide/s3.md)** - Cloud storage setup
 - **[Configuration Guide](../user-guide/configuration.md)** - Advanced options
-- **[API Reference](../api/core.md)** - Complete API documentation
+- **[API Reference](../api/index.md)** - Complete API documentation
 
 ## Need Help?
 

@@ -27,10 +27,8 @@ nav:
     - Configuration: user-guide/configuration.md
     - S3 Integration: user-guide/s3.md
   - API Reference:
-    - Core: api/core.md
-    - Generators: api/generators.md
-    - Writers: api/writers.md
-    - CLI: api/cli.md
+    - Overview: api/index.md
+    - Modules: api/
   - Tutorials:
     - Overview: tutorials/index.md
     - E-commerce Dataset: tutorials/ecommerce-dataset.md
@@ -76,14 +74,14 @@ theme:
     - toc.integrate
   palette:
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: grey
+      accent: black
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: blue
-      accent: blue
+      primary: black
+      accent: grey
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -92,6 +90,9 @@ theme:
     code: Roboto Mono
   favicon: assets/favicon.png
   logo: assets/logo.png
+
+exclude_docs: |
+  includes/**
 
 plugins:
   - search:
@@ -104,10 +105,15 @@ plugins:
             docstring_section_style: list
             docstring_options:
               ignore_init_summary: yes
-            merge_init_into_class: yes
-            show_source: true
+            members_order: source
+            merge_init_into_class: true
+            separate_signature: false
+            show_if_no_docstring: false
             show_root_heading: true
             show_root_members_full_path: false
+            show_signature: true
+            show_signature_annotations: true
+            show_source: true
             show_symbol_type_heading: true
             show_symbol_type_toc: true
             signature_crossrefs: true

@@ -32,6 +32,14 @@ else:
 
 
 class IcebergWriter(TableWriter):
+    """Write tables to Apache Iceberg using the PyIceberg SQL catalog.
+
+    Args:
+        output_uri: Warehouse location where tables will be stored.
+        s3: Optional S3 configuration for object storage access.
+        catalog: Catalog configuration containing connection info.
+        options: Writer tuning parameters (currently unused).
+    """
     format_name = "iceberg"
 
     def __init__(
@@ -75,6 +83,7 @@ class IcebergWriter(TableWriter):
         schema: dict[str, pl.DataType] | None,
         partition_spec: PartitionSpec | None,
     ) -> None:
+        """Create the Iceberg table if needed and append all batches."""
         if schema is None:
             raise ValueError("Schema is required to write Iceberg tables")
 

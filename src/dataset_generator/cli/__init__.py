@@ -50,6 +50,11 @@ def list_formats() -> None:
 
 @app.command("info")
 def dataset_info(dataset: str) -> None:
+    """Print the schema and partitioning metadata for a dataset.
+
+    Args:
+        dataset: Generator name registered via ``register_generator``.
+    """
     gen = create_generator(dataset)
     typer.echo(f"Dataset: {dataset}")
     typer.echo("Tables:")
@@ -104,6 +109,7 @@ def generate(
     catalog_uri: Optional[str] = typer.Option(None, help="Catalog connection URI"),
     catalog_namespace: Optional[str] = typer.Option(None, help="Catalog namespace"),
 ) -> None:
+    """Generate a dataset using the requested writer and configuration."""
     opts = WriterOptions(file_rows_target=file_rows_target, compression=compression)
 
     orders_partitioning = orders_partitioning.lower()
@@ -147,6 +153,19 @@ def _build_s3_config(
     region: str,
     use_ssl: Optional[bool],
 ) -> Optional[S3Config]:
+    """Build an optional S3Config from CLI options.
+
+    Args:
+        uri: Base S3 URI (e.g. ``s3://bucket/prefix``).
+        key: Access key ID.
+        secret: Secret access key.
+        endpoint: Optional custom endpoint.
+        region: AWS region, defaults to ``us-east-1``.
+        use_ssl: Force TLS on/off. ``None`` keeps the backend default.
+
+    Raises:
+        typer.BadParameter: If incomplete credentials are provided.
+    """
     if not uri:
         return None
     if not key or not secret:
@@ -164,6 +183,16 @@ def _build_s3_config(
 def _build_catalog_config(
     kind: Optional[str], uri: Optional[str], namespace: Optional[str]
 ) -> Optional[CatalogConfig]:
+    """Build an optional CatalogConfig from CLI options.
+
+    Args:
+        kind: Catalog implementation name (``sqlite`` or ``postgres``).
+        uri: Connection URI.
+        namespace: Optional logical namespace.
+
+    Raises:
+        typer.BadParameter: If only one of ``catalog-kind``/``catalog-uri`` is supplied.
+    """
     if not kind and not uri:
         return None
     if not kind or not uri:
@@ -172,6 +201,7 @@ def _build_catalog_config(
 
 
 def main() -> None:  # pragma: no cover - CLI entrypoint
+    """CLI entry point used by ``python -m dataset_generator.cli``."""
     app()
 
 

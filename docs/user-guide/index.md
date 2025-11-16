@@ -85,7 +85,7 @@ If you need help beyond what's covered in this guide:
 
 - **[Troubleshooting](troubleshooting.md)** - Common issues and solutions
 - **[Examples](../examples/jupyter.md)** - Working code examples
-- **[API Reference](../api/core.md)** - Complete API documentation
+- **[API Reference](../api/index.md)** - Complete API documentation
 - **[GitHub Issues](https://github.com/volker-lorrmann/dataset-generator/issues)** - Report bugs or request features
 
 ## Next Steps

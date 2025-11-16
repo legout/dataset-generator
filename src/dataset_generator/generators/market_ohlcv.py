@@ -24,6 +24,26 @@ OHLCV_BASE_SCHEMA: SchemaLike = {
 
 @dataclass
 class MarketOHLCVGenerator:
+    """Generate OHLCV bars for a basket of symbols.
+
+    Args:
+        symbols: Ordered list of tickers to simulate.
+        freq: Bar frequency. Supported values: ``1m``, ``5m``, ``15m``, ``1h``,
+            ``1d``.
+        start_date: Inclusive lower bound for generated trading days.
+        end_date: Inclusive upper bound for generated trading days.
+        mu: Drift term for the geometric Brownian motion.
+        sigma: Volatility term for the geometric Brownian motion.
+        base_price: Default starting price used when ``base_prices`` omits a
+            symbol.
+        base_prices: Optional per-symbol overrides for the starting price.
+        volume_mean: Mean of the log-normal volume distribution.
+        volume_sigma: Sigma of the log-normal volume distribution.
+        trading_hours: Tuple of ``(start_hour, end_hour)`` used for intraday
+            frequencies.
+        seed: RNG seed.
+        file_rows_target: Approximate batch size used for streaming writes.
+    """
     symbols: Sequence[str]
     freq: Literal["1m", "5m", "15m", "1h", "1d"] = "1m"
     start_date: date = date(2023, 1, 1)

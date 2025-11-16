@@ -155,7 +155,7 @@ dataset-generator generate weather \
 ## What's Next?
 
 - **[User Guide](../user-guide/index.md)** - Comprehensive documentation
-- **[API Reference](../api/core.md)** - Complete API documentation  
+- **[API Reference](../api/index.md)** - Complete API documentation  
 - **[Tutorials](../tutorials/index.md)** - Step-by-step examples
 - **[Examples](../examples/jupyter.md)** - Interactive notebooks
 

@@ -174,4 +174,4 @@ print(daily_orders)
 
 - **[Marimo Apps](marimo.md)** - Interactive web applications
 - **[Tutorials](../tutorials/index.md)** - Step-by-step guides
-- **[API Reference](../api/core.md)** - Complete documentation
+- **[API Reference](../api/index.md)** - Complete documentation

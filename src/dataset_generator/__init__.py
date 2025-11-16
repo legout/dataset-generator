@@ -1,3 +1,5 @@
+"""Public Dataset Generator API surface exported for end users."""
+
 from dataset_generator.catalog.configs import CatalogConfig
 from dataset_generator.core.factory import (
     available_generators,

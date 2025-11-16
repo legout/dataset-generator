@@ -19,6 +19,14 @@ else:
     OPTIONAL_ERROR = None
 
 class DuckLakeWriter(TableWriter):
+    """Write tables to DuckDBC's DuckLake extension and register them in a catalog.
+
+    Args:
+        output_uri: Base filesystem or object-store location.
+        s3: Optional S3 configuration for DuckDB.
+        catalog: DuckLake catalog configuration.
+        options: Writer tuning parameters.
+    """
     format_name = "ducklake"
 
     def __init__(
@@ -55,6 +63,7 @@ class DuckLakeWriter(TableWriter):
         schema: dict[str, pl.DataType] | None,
         partition_spec: PartitionSpec | None,
     ) -> None:
+        """Register the table in DuckLake and write its batches."""
         location = f"{self._root}/{table}" if table else self._root
         self._catalog.register_table(table, location, partition_spec)
         if partition_spec:

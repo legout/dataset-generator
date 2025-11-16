@@ -1,3 +1,5 @@
+"""Register built-in dataset generators so they are discoverable by name."""
+
 from __future__ import annotations
 
 from dataset_generator.core.factory import register_generator

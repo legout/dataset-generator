@@ -6,8 +6,8 @@ import mkdocs_gen_files
 
 nav = mkdocs_gen_files.Nav()
 
-root = Path(__file__).parent.parent
-src = root / "src"
+project_root = Path(__file__).resolve().parents[2]
+src = project_root / "src"
 
 for path in sorted(src.rglob("*.py")):
     module_path = path.relative_to(src).with_suffix("")
@@ -32,7 +32,7 @@ for path in sorted(src.rglob("*.py")):
         ident = ".".join(parts)
         fd.write(f"::: {ident}")
 
-    mkdocs_gen_files.set_edit_path(full_doc_path, path.relative_to(root))
+    mkdocs_gen_files.set_edit_path(full_doc_path, path.relative_to(project_root))
 
 with mkdocs_gen_files.open("api/SUMMARY.md", "w") as nav_file:
     nav_file.writelines(nav.build_literate_nav())

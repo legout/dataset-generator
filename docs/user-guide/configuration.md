@@ -299,4 +299,4 @@ print(f"Generation completed in {end_time - start_time:.2f} seconds")
 
 - **[S3 Integration](s3.md)** - Cloud storage setup
 - **[User Guide](index.md)** - Complete usage guide
-- **[API Reference](../api/core.md)** - Advanced API usage
+- **[API Reference](../api/index.md)** - Advanced API usage

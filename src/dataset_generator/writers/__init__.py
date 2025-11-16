@@ -1,3 +1,5 @@
+"""Register writer implementations so they can be created via the factory."""
+
 from __future__ import annotations
 
 from dataset_generator.core.factory import register_writer

@@ -47,6 +47,32 @@ ORDER_ITEMS_BASE_SCHEMA: SchemaLike = {
 
 @dataclass
 class ECommerceGenerator:
+    """Generate a synthetic multi-table transactional e-commerce dataset.
+
+    The generator emits customers, products, orders, and order_items tables with
+    controllable volumes, batching behavior, and partition columns. Batches are
+    sized so downstream writers can stream data without loading everything into
+    memory.
+
+    Args:
+        seed: Base RNG seed used to derive deterministic sub-seeds.
+        n_customers: Number of unique synthetic customers.
+        n_products: Number of unique synthetic products.
+        orders_per_day: Baseline number of orders sampled per day.
+        order_items_mean: Average number of line items per order.
+        start_date: Inclusive lower bound for generated orders.
+        end_date: Inclusive upper bound for generated orders.
+        file_rows_target: Approximate number of rows placed into each batch.
+        orders_partitioning: Partitioning strategy for orders/order_items
+            tables (``"ymd"``, ``"ym"``, or ``"yearmonth"``).
+        orders_mode: Strategy for sampling daily order counts
+            (``"fixed"``, ``"range"``, or ``"normal"``).
+        orders_min: Lower bound when ``orders_mode="range"``.
+        orders_max: Upper bound when ``orders_mode="range"``.
+        orders_mean: Mean used when ``orders_mode="normal"``.
+        orders_std: Standard deviation when ``orders_mode="normal"``.
+        orders_floor: Minimum number of orders enforced after sampling.
+    """
     seed: int = 42
     n_customers: int = 1_000_000
     n_products: int = 50_000

@@ -10,6 +10,8 @@ from dataset_generator.io.s3 import S3Config, filesystem_and_root
 
 
 class ParquetPartitionedWriter(TableWriter):
+    """Write tables as partitioned Parquet datasets to the local FS or S3."""
+
     format_name = "parquet"
 
     def __init__(
@@ -31,6 +33,7 @@ class ParquetPartitionedWriter(TableWriter):
         schema: dict[str, pl.DataType] | None,
         partition_spec: PartitionSpec | None,
     ) -> None:
+        """Write the provided batches either as a single file or partitioned tree."""
         if partition_spec:
             self._write_partitioned(table, batches, partition_spec)
         else:

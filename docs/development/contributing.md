@@ -142,7 +142,7 @@ class MyGeneratorTest(unittest.TestCase):
 
 ### 4. Update Documentation
 
-- Add generator to [User Guide](../user-guide/generators/)
+- Add generator to [User Guide](../user-guide/generators/ecommerce.md)
 - Update API reference
 - Add examples
 
@@ -192,6 +192,35 @@ mkdocs build
 - **`docs/getting-started/`** - Installation and quick start
 - **`docs/user-guide/`** - Comprehensive usage guide
 - **`docs/api/`** - Auto-generated API reference
+
+### API Navigation & Includes
+
+- `docs/scripts/gen_ref_pages.py` runs during every MkDocs build and writes
+  `api/SUMMARY.md` plus one markdown file per module. The `literate-nav`
+  plugin expands the `- api/` entry in `mkdocs.yml`, so you never need to hand
+  edit the navigation when new modules/packages are added—just ensure the code
+  is importable and has docstrings.
+- Snippet-only fragments (for example `docs/includes/mkdocs.md`) are excluded
+  from the navigation via `exclude_docs`. Keep additional include files under
+  `docs/includes/` so they inherit the same rule and do not trigger orphan
+  warnings during `mkdocs build`.
+
+### API Docstrings
+
+The API reference is generated directly from docstrings through `mkdocstrings`.
+Follow these guidelines so the rendered pages stay consistent:
+
+- Start every public module, class, and function with a one-line summary, then
+  include details describing behavior and edge cases.
+- Use Google-style sections (`Args:`, `Returns:`, `Raises:`) so parameters and
+  return types show up in the table mkdocstrings renders. Reference other APIs
+  with backticks (``dataset_generator.core.write_dataset``) for automatic links.
+- Prefer type-hinted function signatures and keep docstrings in sync with
+  defaults. Mention units or accepted values when it is not obvious from types.
+- Add short examples when they clarify usage; they are shown verbatim in the API
+  docs, so make sure they can be copy/pasted.
+- Run `mkdocs build` (or `mkdocs serve`) after editing docstrings to confirm new
+  symbols appear under **API Reference → Modules**.
 
 ## Testing
 

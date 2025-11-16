@@ -40,7 +40,7 @@ dataset-generator generate ecommerce \
 
 - **[Getting Started](getting-started/installation.md)** - Installation and basic setup
 - **[User Guide](user-guide/index.md)** - Comprehensive usage guide
-- **[API Reference](api/core.md)** - Complete API documentation
+- **[API Reference](api/index.md)** - Complete API documentation
 - **[Tutorials](tutorials/index.md)** - Step-by-step examples
 - **[Examples](examples/jupyter.md)** - Jupyter notebooks and Marimo apps
 

@@ -18,13 +18,22 @@ else:  # pragma: no branch
 
 
 class DeltaLakeWriter(TableWriter):
+    """Write tables to a Delta Lake location using deltalake bindings.
+
+    Args:
+        output_uri: Target table root or directory.
+        s3: Optional S3 configuration passed to the Delta client.
+        catalog: Unused placeholder for interface compatibility.
+        options: Writer tuning parameters.
+    """
+
     format_name = "delta"
 
     def __init__(
         self,
         output_uri: str,
         s3: S3Config | None,
-        _: object,
+        catalog: object | None,
         options: WriterOptions,
     ) -> None:
         if OPTIONAL_ERROR is not None:
@@ -44,6 +53,7 @@ class DeltaLakeWriter(TableWriter):
         schema: dict[str, pl.DataType] | None,
         partition_spec: PartitionSpec | None,
     ) -> None:
+        """Append all batches to a Delta table, creating it on the first write."""
         uri = f"{self._base_uri}/{table}" if table else self._base_uri
         storage_options = self._storage_options()
 

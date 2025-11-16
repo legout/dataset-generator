@@ -25,6 +25,28 @@ QUOTES_BASE_SCHEMA: SchemaLike = {
 
 @dataclass
 class MarketQuotesGenerator:
+    """Generate a high-frequency quote stream with microstructure noise.
+
+    Args:
+        symbols: Symbols that receive quotes.
+        quotes_per_minute: Number of quote events per minute per symbol.
+        start_date: Inclusive lower bound for generated trading days.
+        end_date: Inclusive upper bound for generated trading days.
+        mu: Drift term for the geometric Brownian motion applied to the
+            mid-price.
+        sigma: Volatility term for the mid-price process.
+        base_price: Default starting mid-price used when ``base_prices`` does
+            not contain an entry.
+        base_prices: Optional per-symbol overrides for the starting price.
+        spread_bps_mean: Mean (in basis points) for spreads.
+        spread_bps_sigma: Standard deviation (in basis points) for spreads.
+        size_mean: Mean shares/contracts shown on each side of the book.
+        size_sigma: Standard deviation for order sizes.
+        trading_hours: Tuple of ``(start_hour, end_hour)`` describing the
+            session.
+        seed: RNG seed.
+        file_rows_target: Approximate batch size.
+    """
     symbols: Sequence[str]
     quotes_per_minute: int = 5
     start_date: date = date(2023, 1, 1)

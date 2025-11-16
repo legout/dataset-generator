@@ -11,14 +11,19 @@ SchemaLike = Mapping[str, pl.DataType]
 
 @dataclass(frozen=True)
 class PartitionSpec:
+    """Declarative description of partition columns for writers."""
+
     columns: tuple[str, ...] = ("year", "month", "day")
 
     def as_tuple(self) -> tuple[str, ...]:
+        """Return the partition columns as a tuple in declaration order."""
         return self.columns
 
 
 @dataclass(frozen=True)
 class WriterOptions:
+    """Common tuning knobs shared by writer implementations."""
+
     file_rows_target: int = 250_000
     compression: str = "snappy"
 

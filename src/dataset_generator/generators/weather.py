@@ -13,6 +13,8 @@ from dataset_generator.core.interfaces import PartitionSpec, SchemaLike
 
 @dataclass(frozen=True)
 class WeatherLocation:
+    """Metadata describing a weather observation location."""
+
     id: int
     name: str
     latitude: float
@@ -44,6 +46,18 @@ DAILY_BASE_SCHEMA: SchemaLike = {
 
 @dataclass
 class WeatherGenerator:
+    """Generate hourly and daily weather observations for multiple locations.
+
+    Args:
+        locations: Locations that receive simulated observations.
+        start_date: Inclusive lower bound for generated days.
+        end_date: Inclusive upper bound for generated days.
+        seasonal_amplitude: Controls seasonal swings of the hourly series.
+        diurnal_amplitude: Controls intra-day temperature swings.
+        storm_rate: Base probability of rain or snow events.
+        seed: RNG seed used for both hourly and daily sequences.
+        file_rows_target: Approximate batch size.
+    """
     locations: Sequence[WeatherLocation] = field(
         default_factory=lambda: (
             WeatherLocation(1, "Berlin", 52.52, 13.40),
